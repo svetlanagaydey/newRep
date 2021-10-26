@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@100&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@1,700&display=swap');
+    body {
+      font-family: 'Barlow', sans-serif;
+      color: rgb(48, 46, 46);
+    }
+    h1 {
+      font-size: 35px;
+      font-weight: 700;
+      text-align: center;
+    }
+    .my_social_links {
+      padding-top: 10px;
+    }
+
+    .ul_without_bullet {
+      list-style-type: none;
+      padding: 0;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      
+    } 
+
+    .bold-italic {
+      font-weight: bold;
+      font-style: italic;
+    } 
+    .card {
+      align-self: center;
+      height: fit-content;
+      max-width: 450px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 15px;
+      padding: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+      background-color: rgb(212, 216, 219);
+      border-radius: 6px;
+    }
+    img {
+      display: block;
+    margin-left: auto;
+    margin-right: auto
+    }
+    .about_me_section {
+      padding: 0 20px;
+    }
+    .about_me_section button {
+      background-color: white;
+    }
+    .examples_button {
+      margin:auto;
+      display:block;
+      width: 200px;
+      height: 40px;
+      text-align: center;
+      border-radius: 3px;
+      color:rgb(127, 147, 162);
+      font-size: 17px;
+    }
+  
+  </style>
+</head>
+<body>
+  <section class="card">
+    <div class="my_introduce">
+      <h1><em>Hello! My name is Svetlana</em></h1>
+    </div>
+
+    <div class="about_me_section">
+      <img src="images/myPhoto.jpg" alt="My photo" width="350px" >
+      <div>
+        <h2>I am a beginning programmer!</h2>
+        <p>I love everything that has to do with <span class="bold-italic">programming</span>. Everyday I try to learn something new. </p>
+        <p>I wish I wood be a good programmer. Here are a few examples of my works:</p>
+          <button class="examples_button">Look examples</button>
+      </div>
+    </div>
+
+    <div class="my_social_links">
+      <h3 class="find_me">You can allways find me by next social links:</h3>
+      <ul class="ul_without_bullet">
+        <li>
+          <a href="https://www.facebook.com/profile.php?id=100002602698757" >
+            <img src="/images/facebookIcon.png" alt="fb" height="25px">
+          </a>
+        </li>
+        <li>
+          <a href="https://twitter.com/SvetlanaGaydey" >
+            <img src="/images/twitterIcon.png" alt="tw" height="25px">
+          </a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/in/светлана-гайдей-5b874aa0/" >
+            <img src="/images/linkedinIcon.png" alt="li" height="25px">
+          </a>
+        </li>
+      </ul>
+    </div>  
+  </section>  
+</body>
+</html>
