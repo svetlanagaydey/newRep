@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      background: rgb(81, 81, 120);
+    }
+    .container {
+      width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    h3 {
+      margin: 15px 10px;
+      text-align: center;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 24px;
+      color: white;
+      font-weight:100;
+    }
+    .big {
+      height: 50px;
+      width: 170px;
+      font-size: 18px;
+    }
+    .middle {
+      height: 40px;
+      width: 150px;
+      font-size: 16px;
+    }
+    .small {
+      height: 35px;
+      width: 130px;
+      font-size: 14px;
+    }
+    .big, .middle {
+      margin-right: 21px;
+    }
+    button {
+      color: white;
+    }
+    .flat button,
+    .round button {
+      border: none;
+    }
+    .flat .big {
+      background: green;
+    }
+    .flat .middle {
+      background: red;
+    }
+    .flat .small {
+      background: blue;
+    }
+    .round .big {
+      border-radius: 30px;
+      background: orange;
+    }
+    .round .middle {
+      border-radius: 20px;
+      background: rgb(231, 227, 89);
+    }
+    .round .small {
+      border-radius: 15px;
+      background: gray;
+    }
+    .flat_ghost button,
+    .round_ghost button {
+      background-color: inherit;
+    }
+    .flat_ghost .big {
+      border: solid 3px green;
+    }
+    .flat_ghost .middle {
+      border: solid 3px red;
+    }
+    .flat_ghost .small {
+      border: solid 3px blue;
+    }
+    .round_ghost .big {
+      border: solid 3px orange;
+      border-radius: 30px;
+    }
+    .round_ghost .middle {
+      border: solid 3px  rgb(231, 227, 89);
+      border-radius: 30px;
+    }
+    .round_ghost .small {
+      border: solid 3px gray;
+      border-radius: 30px;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="flat">
+      <h3>Flat</h3>
+      <button class="big">Register</button>
+      <button class="middle">Clear</button>
+      <button class="small">Submit</button>
+    </div>
+
+    <div class="round">
+      <h3>Round</h3>
+      <button class="big">Register</button>
+      <button class="middle">Clear</button>
+      <button class="small">Submit</button>
+    </div>
+
+    <div class="flat_ghost">
+      <h3>Flat Ghost</h3>
+      <button class="big">Register</button>
+      <button class="middle">Clear</button>
+      <button class="small">Submit</button>
+    </div>
+
+    <div class="round_ghost">
+      <h3>Round Ghost</h3>
+      <button class="big">Register</button>
+      <button class="middle">Clear</button>
+      <button class="small">Submit</button>
+    </div>
+  </div>
+    
+</body>
+</html>
