@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+        }
+        ul {
+            list-style: none;
+        }
+        a {
+            text-decoration: none;
+            color: black;
+        }
+        header {
+            margin: 10px;
+            padding: 20px 10px;
+            display: flex;
+            justify-content: space-between;
+            border: solid gray 2px;
+        }
+        .left {
+            font-size: 20px;
+        }
+        .right {
+            display: flex;
+        }
+        .right li {
+            font-size: 16px;
+            padding-left: 18px;
+        }
+        
+        @media (max-width: 550px) {
+            header {
+                flex-direction: column;
+                justify-content: center;
+            }
+            .left {
+                text-align: center;
+            }
+            ul {
+                padding: 0;
+                flex-direction: column;
+                text-align: center;
+            }
+            .right li {
+                padding: 10px 0 0 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="left">APPLEEEDS</div>
+        <ul class="right">
+            <li><a href="">HOME</a></li>
+            <li><a href="">ABOUT</a></li>
+            <li><a href="">PORTFOLIO</a></li>
+            <li><a href="">CONTACT</a></li>
+        </ul>
+    </header>
+</body>
+</html>
