@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    .container {
+        max-width: 1092px;
+        margin: auto;
+    }
+    .header { 
+      height: 100px;
+      margin: 5px 0;
+      background-color: rgb(240, 173, 102);
+      text-align: center;
+      vertical-align: middle;
+    }
+    .header p, .footer p {
+      line-height:100px;
+    }
+    .side {
+      float: left;
+      width: 29.5%;
+      min-height: 200px;
+      margin-right: 0.5%;
+      background: rgb(57, 158, 57);
+      text-align: left;
+    }
+    .main {
+      float: right;
+      width: 70%;
+      margin-bottom: 5px;
+      min-height: 200px;
+      background: rgb(228, 127, 228);
+      text-align: right;
+    }
+    .side p, .main p {
+      padding: 10px;
+    }
+    .footer {
+      clear: both;
+      height: 100px;
+      background: rgb(74, 74, 238);
+      text-align: center;
+    }
+    .header, .side, .main, .footer {
+      border: solid 1px rgb(32, 32, 32);
+    }
+    
+    @media (max-width: 800px) {
+        .side {
+            display: none;
+        }
+        .main {
+            float: none;
+            width: 100%;
+            text-align: center;
+        }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <p>Header</p>
+    </div>
+    <div class="side">
+      <p>Side</p>
+    </div>
+    <div class="main">
+      <p>Main</p>
+    </div>
+    <div class="footer">
+      <p>Footer</p>
+    </div>
+
+  </div>
+</body>
+</html>
