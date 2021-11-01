@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 18px;
+            padding: 20px;
+        }
+        .tooltip {
+            color: rgb(17, 17, 202);
+            position: relative;
+        }
+        .tooltip::before {
+            display: none;
+            content: 'Explanation';
+            position: absolute;
+            bottom: 20px;
+            border-radius: 10px;
+            padding: 5px;
+            background: plum;
+        }
+        .tooltip::after{
+            display: none;
+            content: " ";
+            position: absolute;
+            bottom: 12px; /* At the bottom of the tooltip */
+            left: 50%;
+            margin-left: -5px;
+            border: solid 4px ;
+            border-color: plum transparent transparent transparent;
+        }
+        .tooltip:hover::before {
+            display: block;
+        }
+        .tooltip:hover::after {
+            display: block;
+        }
+
+    </style>
+</head>
+<body>
+    <p>Lorem ipsum dolor sit amet <span class="tooltip">consectetur</span>, adipisicing elit. Eos impedit autem iure reprehenderit hic cum placeat velit facere saepe et repudiandae totam excepturi, numquam itaque tenetur corporis nisi asperiores tempora nemo sunt enim cupiditate adipisci voluptate! Fugit accusantium, facilis, excepturi qui ipsam cupiditate, exercitationem itaque eos sed iste porro deleniti?</p>
+    <p>Lorem ipsum dolor sit, amet consectetur <span class="tooltip">adipisicing</span> elit. Laborum ducimus doloremque culpa cupiditate dolore error blanditiis officia earum quo dolores repellendus eveniet hic, ipsa placeat necessitatibus commodi pariatur quae repudiandae aspernatur facilis laboriosam! Perspiciatis vitae, quidem, accusamus iusto illo aperiam rerum sapiente odit voluptatem nemo sint eos, excepturi corrupti veniam.</p>
+</body>
+</html>
