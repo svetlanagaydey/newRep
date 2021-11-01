@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing:border-box;
+        }
+        body {
+            background-color: black;
+        }
+        .box {
+            position: relative;
+            text-align: center;
+        }
+        .content {
+           height: 150px;
+           width: 200px;
+           position: relative;
+           border: solid red 3px;
+           margin: 30px auto;
+           color: white;
+           text-align: center;
+           line-height: 150px;
+           font-size: 25px;
+        }
+        .content::before{
+            content: '';
+            height: 150px;
+            width: 160px;
+            background: black;
+            position: absolute;
+            top: -3px;
+            left: 17px;
+        }
+        .content::after {
+            height: 110px;
+            width: 200px;
+            content: 'Cool Border';
+            color: white;
+            background-color: black;
+            position: absolute;
+            top: 17px;
+            left: -3px;
+            line-height: 110px;
+        }
+        
+        
+    </style>
+</head>
+    <body>
+        <div class="box">
+            <div class="content">Cool Border</div>
+
+            <p></p>
+        </div>
+        
+    </body>
+</html>
