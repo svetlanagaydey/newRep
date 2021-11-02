@@ -16,7 +16,6 @@
             font-family: Arial, Helvetica, sans-serif;
             position: relative;
             overflow: hidden;
-            transition-duration: 1s;
         }
         .rotate::before {
             visibility: hidden;
@@ -75,9 +74,10 @@
             transition-duration: 1s;
         }
         .translate_y:hover::before {
+            transform: translateY(100%);
             transition-duration: 1s;
             visibility: visible;
-            top: 0;
+            
         }
         .scale::before {
             content: "Scale & Opacity";
