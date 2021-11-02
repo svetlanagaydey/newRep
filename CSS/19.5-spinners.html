@@ -45,23 +45,30 @@
             border: 6px solid #131313;
             /* border-bottom: 6px solid rgb(71, 192, 160); */
             background: linear-gradient(45deg,#131313,rgb(71, 192, 160));  
-            border-radius: 50%;
+            /* border-radius: 50%; */
             animation-name: example2;
             animation-duration: 1.5s;
             animation-iteration-count: infinite;
             animation-timing-function: linear;
             transform: rotate(360deg);
+            box-sizing: border-box;
+           
+            border-radius: 100%;
+            background: linear-gradient(45deg, rgb(71, 192, 160), #131313 100%);
+
+            transition: transform 0.6s cubic-bezier(0.76, 0, 0.24, 1), box-shadow 0.8s cubic-bezier(0.76, 0, 0.24, 1);
         }
         .sp2::after {
             content: '';
             background: #131313;
             position: absolute;
             border-radius: 50%;
-            height: 116px;
-            width: 116px;
+            height: 100px;
+            width: 100px;
             top: 4px;
             left: 4px;
         }
+        
         @keyframes example2 {
             from {transform: rotate(0);}
             to {transform: rotate(360deg);}
