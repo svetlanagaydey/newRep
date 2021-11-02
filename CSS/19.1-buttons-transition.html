@@ -5,6 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <style>
+    :root {
+      --color-green: green;
+      --color-red: red;
+      --color-blue: blue;
+      --color-yellow:  rgb(231, 227, 89);
+      --color-orange: orange;
+      --color-gray: gray;
+    }
     * {
       margin: 0;
       padding: 0;
@@ -55,46 +63,46 @@
       background: green;
     }
     .flat .middle {
-      background: red;
+      background: var(--color-red);
     }
     .flat .small {
-      background: rgb(30, 30, 215);
+      background:var(--color-blue);
     }
     .round .big {
       border-radius: 30px;
-      background: orange;
+      background: var(--color-orange);
     }
     .round .middle {
       border-radius: 20px;
-      background: rgb(231, 227, 89);
+      background: var(--color-yellow);
     }
     .round .small {
       border-radius: 15px;
-      background: gray;
+      background: var(--color-gray);
     }
     .flat_ghost button,
     .round_ghost button {
       background-color: inherit;
     }
     .flat_ghost .big {
-      border: solid 3px green;
+      border: solid 3px var(--color-green);
     }
     .flat_ghost .middle {
-      border: solid 3px red;
+      border: solid 3px var(--color-red);
     }
     .flat_ghost .small {
-      border: solid 3px blue;
+      border: solid 3px var(--color-blue);
     }
     .round_ghost .big {
-      border: solid 3px orange;
+      border: solid 3px var(--color-orange);
       border-radius: 30px;
     }
     .round_ghost .middle {
-      border: solid 3px  rgb(231, 227, 89);
+      border: solid 3px var(--color-yellow);
       border-radius: 30px;
     }
     .round_ghost .small {
-      border: solid 3px gray;
+      border: solid 3px var(--color-gray);
       border-radius: 30px;
     }
     .flat button:hover, 
@@ -102,22 +110,22 @@
       opacity : 0.5;
     }
     .flat_ghost .big:hover {
-      background-color: green;
+      background-color: var(--color-green);
     }
     .flat_ghost .middle:hover {
-      background-color: red;
+      background-color: var(--color-red);
     }
     .flat_ghost .small:hover {
-      background: blue;
+      background: var(--color-blue);
     }
     .round_ghost .big:hover {
-      background: orange;
+      background: var(--color-orange);
     }
     .round_ghost .middle:hover {
-      background: rgb(231, 227, 89);
+      background: var(--color-yellow);
     }
     .round_ghost .small:hover {
-      background: gray;
+      background: var(--color-gray);
     }
     button:hover {
       transition: 0.8s;
