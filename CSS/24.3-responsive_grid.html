@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive-grid</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 25px;
+            max-width: 1920px;
+        }
+        .greed {
+            display: grid;
+            grid-template-areas: 
+                'header header header header'
+                'sidebar content content sidebar2'
+                'footer footer footer footer';
+                grid-gap: 1rem;
+        }
+        .item {
+            color: white;
+            min-height: 100px;
+            border-radius: 30px;
+            min-width: 250px;
+            line-height: 100px;
+            text-align: center;
+        }
+        .item1 {
+            background-color: red;
+            grid-area: header;
+        }
+        .item2 {
+            background-color: blue;
+            grid-area: sidebar;
+           
+        }
+        .item3 {
+            padding: 30px 15px;
+            background-color: green;
+            line-height: 1.5;
+            grid-area: content;
+           
+        }
+        .item4 {
+            background-color: purple;
+            grid-area: sidebar2;
+           
+          
+        }
+        .item5 {
+            background-color: yellow;
+            grid-area: footer;
+        }
+
+        @media (max-width: 900px) {
+            .greed {
+                grid-template-areas: 
+                'header header header header'
+                'sidebar content content content'
+                'sidebar2 sidebar2 sidebar2 sidebar2'
+                'footer footer footer footer';
+            }
+        @media (max-width: 550px) {
+        .greed {
+            grid-template-areas: 
+            'header header header header'
+            'sidebar sidebar sidebar sidebar'
+            'content content content content'
+            'sidebar2 sidebar2 sidebar2 sidebar2'
+            'footer footer footer footer';
+        }
+        }
+    </style>
+</head>
+<body>
+    <div class="greed">
+        <div class="item item1">Header</div>
+        <div class="item item2">Sidebar1</div>
+        <div class="item item3"> Content <br>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, consectetur velit maxime cumque facilis corporis!</div>
+        <div class="item item4">Sidebar2</div>
+        <div class="item item5">Footer</div>
+    </div>
+    
+</body>
+</html>
