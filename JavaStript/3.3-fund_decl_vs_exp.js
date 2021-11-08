@@ -6,8 +6,8 @@ let populationUkraine = 45;
 function percentageOfWorld1 (population) {
     return (population / WORLD_POPULATION * 100).toFixed(1);
 }
-console.log(percentageOfWorld1(populationChina));  // for China
-console.log(percentageOfWorld1(populationUsa));  // for USA
+console.log(percentageOfWorld1(populationChina));
+console.log(percentageOfWorld1(populationUsa));
 console.log(percentageOfWorld1(populationUkraine));  // for Ukraine
 
 const percentageOfWorld2 = population => (population/WORLD_POPULATION*100).toFixed(2);
