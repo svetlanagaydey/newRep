@@ -1,5 +1,4 @@
-let arr1 = new Array(100);
-arr1.fill(100, 0, 100);
+let arr1 = Array(100).fill(100, 0, 100);
 console.log(arr1);
 
 let arr2 = [];
@@ -22,7 +21,7 @@ console.log(Array.isArray(objToArray));
 let copy = arr2.splice(0, arr2.length);
 console.log(copy);
 
-copy.unshift('!!!');
+copy.unshift('YE');
 console.log(arr1);
 
 let copyEffect = copy;
