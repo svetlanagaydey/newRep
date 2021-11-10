@@ -4,7 +4,6 @@ function dublicateUnic(arr) {
         if (arrayUnic.indexOf(element) == -1){
             arrayUnic.push(element);
         }
-
     } )
     return arrayUnic;
 }
