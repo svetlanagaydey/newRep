@@ -1,8 +1,20 @@
 function step(n) {
-    let result = '';
+    let result = [];
+    // for (let i=0; i< n; i++) {
+    //     result += '#'.repeat(i+1) + ' '.repeat(n-i+1) + '\n';
+    // }
     for (let i=0; i< n; i++) {
-        result += String('#'.repeat(i+1) + ' '.repeat(n-i+1) + '\n');
+        let rowResult = '';
+
+        for (let j = 0; j <= i; j++){
+            rowResult += '#';
+        }
+        for (let j = i+1; j < n; j++) {
+            rowResult += ' ';
+        }
+       // console.log(rowResult);
+        result.push(rowResult);
     }
-    return result;
+ return result;
 }
 console.log(step(5));
