@@ -19,5 +19,18 @@ function dashesPrint(string) {
     console.log(string.split(' ').join('-'));
 }
 
+function myFunction(string, callBack) {
+    let lengthArr = [];
+    string.split(' ').forEach(element => {
+        lengthArr.push(element.length);
+    });
+    callBack(lengthArr.join(' '));
+}
+
+function dollarPrint(string) { 
+    console.log(string.split(' ').join(' $$ '));
+}
+
 firstWordUpperCase("Let me now, please!", callbackPrint);
 firstWordUpperCase("Let me now, please!", dashesPrint);
+myFunction("Let me now, please!", dollarPrint);
