@@ -55,17 +55,15 @@ function shiftLetters(string) {
 }
 
 function swapCase(string) {
-    let result = '';
+    let result = [];
     string.split(' ').forEach((element, index) => {
-        console.log(element, index);
         if (index % 2 == 0) {
-            result += element.toUpperCase();
-            console.log(result);
+            result.push(element.toUpperCase());
         } else {
-            result += element;
+            result.push(element);
         }
     });
-    return result;
+    return result.join(' ');
 }
 
 console.log(doubleValue(array1));
