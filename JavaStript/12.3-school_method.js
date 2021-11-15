@@ -39,12 +39,15 @@ const school = {
         },
     ],
     findPerson(type, id) {
-        if (type == 'teachers') {
-            return this.teachers.find(teacher => teacher.id === id);
-        }
-        if (type == 'students') {
-            return this.students.find(studend => studend.id === id);
-        }
+        // if (type == 'teachers') {
+        //     return this.teachers.find(teacher => teacher.id === id);
+        // }
+        // if (type == 'students') {
+        //     return this.students.find(studend => studend.id === id);
+        // }
+
+        return (this.students || this.teachers).find(el => el.id === id);
     }
 };
 console.log(school.findPerson('students', 13));
+
