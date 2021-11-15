@@ -67,7 +67,7 @@ function food(array) {
         console.log(element.favoriteFoods.meats[0]);
         element.favoriteFoods.meats.forEach(meat => {
             if (result[meat] !== undefined) {
-                result[meat] += 1;
+                result.meat += 1;
             } else {
                 result[meat] = 1;    
             }
