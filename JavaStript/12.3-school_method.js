@@ -16,7 +16,8 @@ const school = {
             capacityLeft: 2,
         },
     ],  
-    students: [
+    students: 
+    [
         {
             id: 10,
             name: "Jennifer",
@@ -39,15 +40,36 @@ const school = {
         },
     ],
     findPerson(type, id) {
-        // if (type == 'teachers') {
-        //     return this.teachers.find(teacher => teacher.id === id);
-        // }
-        // if (type == 'students') {
-        //     return this.students.find(studend => studend.id === id);
-        // }
+        if (type == 'teachers') {
+            return this.teachers.find(teacher => teacher.id === id);
+        }
+        if (type == 'students') {
+            return this.students.find(studend => studend.id === id);
+        }
 
-        return (this.students || this.teachers).find(el => el.id === id);
-    }
+        // return (this.students && this.teachers).find(el => el.id === id);
+    },
+    assignStudent(subject) {
+
+        this.teachers.forEach(element => {
+            if (element.subjects === subject) {
+                element.capacityLeft -=1;
+            }
+
+        })
+        //console.log(this.teachers.filter(teacher => teacher.subjects == subjects));
+       // console.log(this.students.find(studend => studend.id == id));
+        //return this.teachers.find(teacher => teacher.subjects === subject);
+
+    //    console.log(this.students.find(studend => studend.id === id));
+    //    console.log(this.students.find(teacher => teacher.subjects == subject));
+       
+    },
 };
 console.log(school.findPerson('students', 13));
+console.log(school.findPerson('teachers', 1));
+console.log(school.assignStudent(11, 'history'));
+console.log(school.assignStudent(12, 'history'));
+console.log(school.assignStudent(13, 'history'));
+console.log(school.findPerson('teachers', 1));
 
