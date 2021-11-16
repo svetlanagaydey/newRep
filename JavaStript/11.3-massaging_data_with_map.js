@@ -64,13 +64,8 @@ function returnYangUsers(array) {
 function food(array) {
     let result = {};
     array.forEach(element => {
-        console.log(element.favoriteFoods.meats[0]);
         element.favoriteFoods.meats.forEach(meat => {
-            if (result[meat] !== undefined) {
-                result.meat += 1;
-            } else {
-                result[meat] = 1;    
-            }
+            result[meat] !== undefined ?  result[meat] += 1 : result[meat] = 1;    
         })
         element.favoriteFoods.fish.forEach(fish => {
             if (result[fish] !== undefined) {

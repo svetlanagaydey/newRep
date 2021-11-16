@@ -10,8 +10,6 @@ function longestConsec(strarr, k) {
           concatObj[sliceItem] = sliceItem.length;
       }
     let maxLength = Math.max(...Object.values(concatObj));
-    console.log(maxLength);
-      
     return Object.keys(concatObj).find(key => concatObj[key] === maxLength);
   }
 

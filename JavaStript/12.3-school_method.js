@@ -13,7 +13,7 @@ const school = {
             name: "Williams",
             subjects: ["history", "ethics"],
             students: [],
-            capacityLeft: 2,
+            capacityLeft: 6,
         },
     ],  
     students: 
@@ -49,27 +49,42 @@ const school = {
 
         // return (this.students && this.teachers).find(el => el.id === id);
     },
-    assignStudent(subject) {
 
-        this.teachers.forEach(element => {
-            if (element.subjects === subject) {
-                element.capacityLeft -=1;
-            }
+    assignStudent(id, subject) {
 
-        })
-        //console.log(this.teachers.filter(teacher => teacher.subjects == subjects));
-       // console.log(this.students.find(studend => studend.id == id));
-        //return this.teachers.find(teacher => teacher.subjects === subject);
+        const stud = this.findPerson('students', id);
+        const teach = this.teachers.find(teacher => teacher.subjects.includes(subject) && teacher.capacityLeft > 0);
 
-    //    console.log(this.students.find(studend => studend.id === id));
-    //    console.log(this.students.find(teacher => teacher.subjects == subject));
-       
+        if (teach !== undefined) {
+            teach.students.push(stud);
+            teach.capacityLeft--;
+        }
+       return (teach);
     },
+    
+    assignTeachersSubject(id, subject) {
+        const teach = this.findPerson('teachers', id);
+        if (!teach.subjects.includes(subject)) {
+            teach.subjects.push(subject);
+        }
+
+    }
 };
-console.log(school.findPerson('students', 13));
-console.log(school.findPerson('teachers', 1));
-console.log(school.assignStudent(11, 'history'));
-console.log(school.assignStudent(12, 'history'));
-console.log(school.assignStudent(13, 'history'));
-console.log(school.findPerson('teachers', 1));
+
+
+
+// console.log(school.findPerson('students', 13));
+
+// assignStudents 
+console.log(school.findPerson('teachers', 2));
+school.assignStudent(11, 'history');
+school.assignStudent(12, 'history');
+school.assignStudent(13, 'history');
+console.log(school.findPerson('teachers', 2));
+console.log('----------------------');
+
+school.assignTeachersSubject(2, 'magic');
+console.log(school.findPerson('teachers', 2));
+
+
 
