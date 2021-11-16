@@ -40,12 +40,14 @@ const school = {
         },
     ],
     findPerson(type, id) {
-        if (type == 'teachers') {
-            return this.teachers.find(teacher => teacher.id === id);
-        }
-        if (type == 'students') {
-            return this.students.find(studend => studend.id === id);
-        }
+
+        return this[type].find(el => el.id === id);
+        // if (type == 'teachers') {
+        //     return this.teachers.find(teacher => teacher.id === id);
+        // }
+        // if (type == 'students') {
+        //     return this.students.find(studend => studend.id === id);
+        // }
 
         // return (this.students && this.teachers).find(el => el.id === id);
     },
@@ -85,6 +87,22 @@ console.log('----------------------');
 
 school.assignTeachersSubject(2, 'magic');
 console.log(school.findPerson('teachers', 2));
+    
+    console.log('----------------------'); 
+
+    function peopleWithAgeDrink(old) {
+  
+        if (old < 14) {
+          return "drink toddy";
+          } else if (14 <= old && old < 18) {
+            return "drink coke";
+          } else if (18 <= old && old <= 20) {
+            return "drink beer";
+          } else if (old >= 21 ) {
+            return "drink whisky";
+        }
+     };
+    console.log(peopleWithAgeDrink(22)); 
 
 
 

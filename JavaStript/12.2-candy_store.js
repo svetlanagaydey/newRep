@@ -15,6 +15,7 @@ const candyStore = {
     ],
     cashRegister: 200,
 }
+candy
 function getCandy(candyStore, id){ 
     return candyStore.candies.find(element => element.id == id);     
 }
