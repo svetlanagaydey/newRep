@@ -13,4 +13,4 @@ console.log(getSum([1,2,3], [5,66,23]));
 
 // there is no coma between arguments str.10
 // the sum can't be const str.2
-// must return
+// must be return
