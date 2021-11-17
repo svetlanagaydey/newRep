@@ -87,22 +87,6 @@ console.log('----------------------');
 
 school.assignTeachersSubject(2, 'magic');
 console.log(school.findPerson('teachers', 2));
-    
-    console.log('----------------------'); 
-
-    function peopleWithAgeDrink(old) {
-  
-        if (old < 14) {
-          return "drink toddy";
-          } else if (14 <= old && old < 18) {
-            return "drink coke";
-          } else if (18 <= old && old <= 20) {
-            return "drink beer";
-          } else if (old >= 21 ) {
-            return "drink whisky";
-        }
-     };
-    console.log(peopleWithAgeDrink(22)); 
-
+console.log(school);
 
 
