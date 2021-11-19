@@ -76,6 +76,9 @@ console.log("Value of f in global scope: ", f);
 funcE();
 var f = 1;
 
+//the function call occurred after the definition of the variable,
+//the console log was called before the definition of the variable
+
 
 
 
