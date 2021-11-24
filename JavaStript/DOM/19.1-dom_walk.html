@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		
+</head>
+
+<body>
+  <ul>
+    <li>title 1</li>
+    <li class="start-here">title 2</li>
+    <li>
+      <ul id = "hear">
+        <li>sub title 1</li>
+        <li>sub title 2</li>
+        <li>sub title 3</li>
+      </ul>
+    </li>
+    <li>title 3</li>
+  </ul>
+  <div>
+      <p>Hello World!</p>
+  </div>
+
+  <script>
+    const liStartHere = document.querySelector('li.start-here');
+    liStartHere.innerHTML= 'main this title';
+
+    const perent = document.querySelector('#hear');
+    const newSubTitle =  document.createElement('li');
+    newSubTitle.innerHTML = 'sub title 4';
+    perent.append(newSubTitle);
+    newSubTitle.remove();
+    document.querySelector('title').innerHTML = 'Master Of The Dom';
+    document.querySelector('p').innerHTML = 'Enouth with Hello World!'
+
+  </script>
+</body>
+
+</html>
