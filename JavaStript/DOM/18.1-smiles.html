@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>smiles</title>
+</head>
+<body>
+    
+    <h1>How many smilyes you want to see?</h1>
+
+    <form action="">
+        <input type="text" id="number" name="number">
+        <button id="butt">
+            Submit
+        </button>
+    </form>
+    <div id="str"></div>
+    <!-- <div style="font-size:100px">&#128539;</div> -->
+
+    <script>
+        let val;
+        document.querySelector('#butt').addEventListener('click', function() {
+            val = document.getElementById('number').value;
+            document.querySelector('input').style.border="solid 4px";
+            document.getElementById('str').innerText="You number: " + val;
+        } ) ;
+    </script>
+</body>
+</html>
