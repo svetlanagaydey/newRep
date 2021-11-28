@@ -37,11 +37,9 @@
         perent.style = 'list-style-type:none;'
             
         users.forEach(el = (el) => {
-            // const perent = document.querySelector('ol');
             const child = document.createElement('li');
             perent.appendChild(child);
             child.id = el.id;
-           
             child.innerText = el.firstName + el.lastName; 
         })    
     </script>
