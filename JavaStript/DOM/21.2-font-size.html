@@ -47,15 +47,21 @@
         
             buttonPlus.addEventListener('click', function() {
                 let currentSize = comStyles.fontSize;
-                text.style.fontSize = (parseInt(currentSize) + 5) + 'px'
+                text.style.fontSize = (parseInt(currentSize) + 1) + 'px';
+                if (parseInt(currentSize) >= 30) {
+                    text.style.fontSize = '30px';
+                }
             } ) ;
 
             buttonMinus.addEventListener('click', function() {
                 currentSize = comStyles.fontSize;
-                text.style.fontSize = (parseInt(currentSize) - 5) + 'px'
+                text.style.fontSize = (parseInt(currentSize) - 1) + 'px';
+                if (parseInt(currentSize) < 6) {
+                    text.style.fontSize = '6px';
+                }
             } ) ;
         </script>
-        
+
     </div>
 </body>
 </html>

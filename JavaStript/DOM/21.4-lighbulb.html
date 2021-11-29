@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+        div {
+            width: 200px;
+            height: 300px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <img src="images/OFFbulb.jpg" alt="">
+    </div>
+
+    <script>
+        let lighbulb = document.querySelector("img");
+        lighbulb.addEventListener('click', function() {
+            if (lighbulb.getAttribute('src') == "images/OFFbulb.jpg") {
+            lighbulb.setAttribute('src', 'images/ONbulb.jpg');
+            }
+             else if (lighbulb.getAttribute('src') == "images/ONbulb.jpg") {
+            lighbulb.setAttribute('src', 'images/OFFbulb.jpg');
+            }
+        })
+    </script>
+</body>
+</html>
