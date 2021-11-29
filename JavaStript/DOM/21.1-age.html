@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       body {
+           padding: 20px;
+           margin-left: 40%;
+       }
+        form {
+            width: 200px;
+            height: 200px;
+            padding: 20px 10px;
+            border: 1px solid gray;
+            text-align: center;
+        }
+        #elem1 {
+            padding: 5px 10px;
+        }
+        #butt {
+            height: 40px;
+            width: 100%;
+            border-radius: 5px;
+            border: none;
+            margin-top: 20px;
+            display: block;
+            background: lightgrey;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <input id="elem1" type="text" name="quantity" placeholder="Enter your age">
+        <input id="butt" type="button" value="Check age"/><br>
+        <div id="str"></div>
+    </form>
+    <div id="str"></div>
+    <script>   
+        butt.onclick = function() {
+            var val = document.getElementById('elem1').value;
+            if (+val < 18) {
+                document.getElementById('str').innerHTML="you’re too young";
+            } else {
+                document.getElementById('str').innerHTML="you can drink";
+            }
+        };
+    </script>
+</body>
+</html>

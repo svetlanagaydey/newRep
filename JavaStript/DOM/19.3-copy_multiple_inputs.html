@@ -38,7 +38,7 @@
         <h1>Text to copy:</h1>
         <p>123456</p>
         <form action="">
-            <input type="text"  autofocus>
+            <input type="text"  onpaste="myFunction()" autofocus>
             <input type="text">
             <input type="text">
             <input type="text">
@@ -49,20 +49,25 @@
     </div>
 
     <script>
+
+      document.addEventListener('keyup', (event) => {
+
       const inputs = document.querySelectorAll('input'); 
-      let result = [];
+      let result = '';
       let last = inputs[inputs.length-1];
 
       for (let i = 0; i < inputs.length; i++) {
         inputs[i].oninput = function() {
-          result += inputs[i].value;
+          result = result + inputs[i].value;
           console.log(result);
           if (inputs[i] == last) {
+            console.log(result);
             document.querySelector('button').click();
           }
         inputs[i+1].focus();
         };
       }
+    })
     </script>
 
 </body>
