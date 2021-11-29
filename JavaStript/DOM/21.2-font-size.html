@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       
+        .containter {
+            width: 1200px;
+            margin: auto;
+            text-align: center;
+        }
+        div {
+            width: 600px;
+            position: relative;
+            margin: 20px 140px;
+        }
+        button {
+            height: 40px;
+            width: 40px;
+            border-radius: 8px;
+            border: none;
+            font-size: 25px;
+        }
+        #minus {
+           position: absolute;
+           right: 0;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta, eveniet ipsum consequuntur, porro qui facilis nulla minus at, quia voluptates asperiores cupiditate recusandae. Reprehenderit qui eos cupiditate est, dolorem consectetur!
+        Praesentium eveniet voluptate inventore ipsam omnis explicabo perspiciatis iste quae consectetur eos officiis consequatur, similique in tempore temporibus a ipsum debitis saepe nobis vero suscipit eum eligendi molestiae? Nemo, amet?
+        Consectetur possimus maxime ab. Recusandae reprehenderit, debitis possimus minus adipisci ea porro illum dolore aut pariatur alias voluptatum libero, eos harum facere, numquam illo! Delectus nesciunt qui in adipisci voluptas!
+        Commodi iure cum rerum, quis explicabo possimus rem? Consequatur doloremque numquam quo similique modi facilis earum itaque. Esse, veritatis voluptatibus, atque minima voluptates quam dicta doloremque, est quis recusandae doloribus.
+        Nisi vero beatae neque earum officiis eos animi debitis, voluptatem alias sunt enim laborum maiores eligendi? Eaque mollitia, repellat cum vitae deleniti neque assumenda ducimus maxime, eligendi fuga sint enim?
+        </p>
+        <button id="plus">+</button>
+        <button id="minus">-</button>
+
+        <script>
+            let text = document.querySelector("p");
+            let buttonPlus = document.querySelector("#plus");
+            let buttonMinus = document.querySelector("#minus");
+            let comStyles = getComputedStyle(text);
+        
+
+            buttonPlus.addEventListener('click', function() {
+                let currentSize = comStyles.fontSize;
+                text.style.fontSize = (parseInt(currentSize) + 5) + 'px'
+            } );
+
+            buttonMinus.addEventListener('click', function() {
+                currentSize = comStyles.fontSize;
+                text.style.fontSize = (parseInt(currentSize) - 5) + 'px'
+            } );
+
+
+        </script>
+    </div>
+</body>
+</html>
