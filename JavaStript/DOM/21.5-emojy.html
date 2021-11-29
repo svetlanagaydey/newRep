@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+        }
+        .contaiter {
+            padding: 50px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        input {
+            padding: 5px 10px;
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            border-radius: 5px;
+            background: pink;
+        }
+        #smileArea {
+            width: 100%;
+            min-height: 100px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="contaiter">
+        <form action="">
+            <input id="input" type="text">
+            <input type="button" id="butt" value="Click me!"></input>
+        </form>
+        <div id="smileArea">
+            
+        </div>
+    </div>
+    <script>
+        let but = document.querySelector('#butt');
+       
+        but.addEventListener('click', function(){
+            const inp = document.querySelector('#input').value;
+            let out = '';
+            for (let i = 0; i < inp; i++) {
+               out +='&#x1F60a';
+            }
+            document.querySelector('#smileArea').innerHTML= out;
+            document.querySelector('form').reset();
+            // console.log(out);
+        })
+    </script>
+    
+</body>
+</html>
