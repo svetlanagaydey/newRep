@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        form {
+            margin-left: 40%;
+            width: 350px;
+            min-height: 100px;
+        }
+        #textArea {
+            display: block;
+            margin: 20px 0;
+            padding: 5px 10px;
+            border-radius: 5px;
+            min-height: 50px;
+            width: 100%;
+        }
+        #but {
+            border-radius: 5px;
+            border: none;
+            background: rgb(226, 228, 228);
+            padding: 10px 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <form>
+        <h3>Why are you interested it this position?</h3>
+        <input id ="textArea" type="text-area">
+        <input id="but" type="button" value="Click Here!">
+        <div id="message"></div>
+    </form>
+    <script>
+        let buttonClick = document.querySelector("#but");
+        buttonClick.addEventListener('click', function(){
+            let text = document.getElementById("textArea").value;
+            let wordNumber = text.split(' ').length;
+            console.log(wordNumber);
+            if (wordNumber < 3) {
+                document.querySelector("#message").innerHTML="Less than 100 words";
+            } else {
+                document.querySelector("#message").innerHTML="Your message sended";
+                document.querySelector('form').reset();
+            }
+        })
+    </script>
+    
+</body>
+</html>
