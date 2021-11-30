@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            font-size: 25px;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        div {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        span {
+            padding: 3px 10px;
+            border: 1px solid black;
+            width: fit-content;
+        }
+        .color-green {
+            color: green;
+            border-width: bold;
+        }
+        .color-red {
+            color: red;
+            border-width: bold;
+        }
+        .butt {
+            height: 30px;
+            width: 80px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Welcome To Guess My Letter</h1>
+        <span>?</span>
+        <p class="answer">Guess letter</p>
+        <p class="keaysGues">Keys guessed</p>
+        <p class="lettersGuessed"></p>
+
+    </div>
+
+    <script>
+        const letter = 'a';
+        const arrayOfLetters = [];
+        const lettersGuessedPlace = document.querySelector('.lettersGuessed');
+        const message = document.querySelector('.keaysGues');
+        const answer = document.querySelector('.answer');
+        const perent = document.querySelector('div');
+        const but = document.createElement('button');
+        but.classList.add('butt');
+        but.innerText='YES';
+
+        document.addEventListener('keypress', function(event) {
+            
+            
+            const letterPressed = event.key;
+    
+            if (letterPressed === letter) {
+                console.log('win');
+                answer.innerHTML='Right letter!'
+                answer.classList.remove('color-red');
+                answer.classList.add('color-green');
+                lettersGuessedPlace.textContent = 'Would you like to play again?'
+                perent.appendChild(but);
+                but.addEventListener('click', function() {
+                    location.reload();
+                })
+                return;
+            }
+            if (arrayOfLetters.includes(letterPressed)) {
+                answer.innerHTML=`${letterPressed} has already been guessed!`
+                answer.classList.add('color-green');
+                console.log('inclides');
+
+            }
+            else {
+            answer.textContent = 'Nope, wrong letter';
+            answer.classList.add('color-red');
+
+            arrayOfLetters.push(letterPressed);
+            console.log(arrayOfLetters);
+            lettersGuessedPlace.textContent = arrayOfLetters.join(', ');
+            }
+           
+        })
+    </script>
+</body>
+</html>
