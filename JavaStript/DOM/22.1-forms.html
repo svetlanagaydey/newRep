@@ -56,14 +56,13 @@
         const fff = document.querySelector('form');
         const bbb = document.querySelector("#butt");
         bbb.addEventListener('click', function() {
-           const name = document.querySelector('.inputName').value;
-           const age = document.querySelector('.inputAge').value;
-           const email = document.querySelector('.inputImail').value;
-        let mesage = document.querySelector('p');
+            const name = document.querySelector('.inputName').value;
+            const age = document.querySelector('.inputAge').value;
+            const email = document.querySelector('.inputImail').value;
         
-        confirm('Confirm your data, please:\nName:' + name + '\nAge:' + age + '\nEmail: ' + email)
-        ? document.querySelector('form').reset()
-        : alert("press");
+            confirm('Confirm your data, please:\nName:' + name + '\nAge:' + age + '\nEmail: ' + email)
+            ? document.querySelector('form').reset()
+            : e.preventDefault();
         })
         
     </script>

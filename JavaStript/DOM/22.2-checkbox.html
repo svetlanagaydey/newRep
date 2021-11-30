@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+        }
+        div {
+            min-height: 250px;
+            width: 300px;
+            border: 1px solid rgb(211, 211, 209);
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+        }
+        input {
+           height: 20px;
+           width: 20px;
+           margin-bottom: 20px;
+        }
+        .img {
+            height: 150px;
+            width: 100px;
+            opacity: 0;
+        }
+    
+    </style>
+</head>
+<body>
+    <div>
+        <input type="checkbox">
+    </div>
+    
+    <script>
+        let img = document.createElement('img');
+        img.setAttribute('src', 'images/ONbulb.jpg');
+        img.classList.add('img');
+        const imgPlace = document.querySelector('div');
+        imgPlace.appendChild(img);
+
+        let checkbox = document.querySelector('input');
+        checkbox.addEventListener('input', (e) => {
+            if (img.style.opacity=="100%") {
+                img.style.opacity="0";
+            } else {
+                img.style.opacity="100%"}
+        })
+    </script>
+</body>
+</html>
