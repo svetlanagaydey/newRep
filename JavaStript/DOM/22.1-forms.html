@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        form {
+            display: block;
+            min-height: 200px;
+            width: 300px;
+            padding: 10px;
+            border: 1px solid lightgray;
+        }
+        input {
+            width:92%;
+            padding: 5px 10px;
+        }
+        #butt {
+            margin-top: 20px;
+            height: 40px;
+            width: 100%;
+            background: rgb(252, 240, 242);
+            border: none;
+            border-radius: 7px;
+            cursor: pointer;
+        }
+        .color-green {
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <form action="/NOOOO" method="GET">
+        <label for="">Full name:
+            <input type="text" class="inputName" placeholder="Your Name">
+        </label>
+        <label for="">Your age:
+            <input type="text" class="inputAge" placeholder="Your Age">
+        </label>
+        <label for="">Email adress:
+            <input type="email" class="inputImail" placeholder="Your Email">
+        </label>
+
+        <button type="button" id="butt" value="SUBMIT">SUBMIT</button>
+    </form>
+
+    <script>
+        const fff = document.querySelector('form');
+        const bbb = document.querySelector("#butt");
+        bbb.addEventListener('click', function() {
+           const name = document.querySelector('.inputName').value;
+           const age = document.querySelector('.inputAge').value;
+           const email = document.querySelector('.inputImail').value;
+        let mesage = document.querySelector('p');
+        
+        confirm('Confirm your data, please:\nName:' + name + '\nAge:' + age + '\nEmail: ' + email)
+        ? document.querySelector('form').reset()
+        : alert("press");
+        })
+        
+    </script>
+</body>
+</html>

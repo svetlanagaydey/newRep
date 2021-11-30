@@ -19,7 +19,7 @@
         input {
             padding: 5px 10px;
         }
-        button {
+        #butt {
             margin-top: 20px;
             padding: 10px 20px;
             border-radius: 5px;
@@ -34,12 +34,11 @@
 </head>
 <body>
     <div class="contaiter">
-        <form action="">
+      
             <input id="input" type="text">
-            <input type="button" id="butt" value="Click me!"></input>
-        </form>
+            <button type="submit" id="butt">Click me!</button>
+        
         <div id="smileArea">
-            
         </div>
     </div>
     <script>
@@ -48,12 +47,12 @@
         but.addEventListener('click', function(){
             const inp = document.querySelector('#input').value;
             let out = '';
+            alert(inp);
             for (let i = 0; i < inp; i++) {
                out +='&#x1F60a';
             }
             document.querySelector('#smileArea').innerHTML= out;
             document.querySelector('form').reset();
-            // console.log(out);
         })
     </script>
     
