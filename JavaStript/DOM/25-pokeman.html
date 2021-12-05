@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Pokemon(pokemonName, pokemonType, pokemonAttackList){
+            this.name = pokemonName;
+            this.type = pokemonType;
+            this.attackList = pokemonAttackList;
+            this.callPokemon = function(pokemonName) {
+                console.log(`I choose you, ${this.name}`)
+            }
+            this.attack = function(index) {
+                console.log(`${this.name} use ${this.attackList[index]}`)
+            }
+        }
+
+        let poki = new Pokemon('Poki-Moki', 'Picachu', ['haya', 'pif-paf', 'pffffff'])
+        let shtoki = new Pokemon('Poki-Shtoki', 'Switty', ['yama', 'bingo', 'kssssss'])
+        let doti = new Pokemon('Poki-Doty', 'Doremi', ['lalala', 'yep', 'ih'])
+
+        console.log(poki.attack(1));
+        console.log(shtoki.callPokemon());
+        console.log(doti.attack(0));
+
+    </script>
+</body>
+</html>
