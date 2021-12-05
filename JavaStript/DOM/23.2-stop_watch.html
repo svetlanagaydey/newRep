@@ -30,20 +30,27 @@
     <script>
         const container = document.querySelector('.container');
         const start = document.querySelector('#start');
+        const stop = document.querySelector('#stop');
         
         let minute = 00;
         let second = 00;
+        let isStop = false;
         
         start.addEventListener('click', function() {  
+            isStop = false;
             timer(00, 3);
         });
 
+        stop.addEventListener('click', function(){
+            isStop = true;
+        })
+
         const timer = function printNumbers(from, to) {
             let current = from;
-            const stop = document.querySelector('#stop');
+          
             let timerId = setInterval(function() {
                 container.innerHTML = `${format(minute)}:${format(second)}:${formatMili(current)}`;
-                if (minute == to-1 && second == 3 && current == 990 ) {
+                if ( (minute == to-1 && second == 3 && current == 990 ) || (isStop == true) ){
                     clearInterval(timerId);
                 }
                 //const clickStop = stop.addEventListener('click', clearInterval(timerId));
@@ -58,20 +65,18 @@
                 }
             }, 10);
         }
-       // printNumbers(00, 3);
+
+
     function format(time) {
         if (time.toString.length===1) {
             return `0${time}`;
         }
     }
     function formatMili(time) {
-        
         if ((time/100) < 1) {
-           
             return `0${time/10}`;
         } 
-            return `${time/10}`;
-        
+        return `${time/10}`;
     }
     </script>
 </body>
