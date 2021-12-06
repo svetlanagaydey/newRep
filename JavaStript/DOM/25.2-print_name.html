@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const hero = {
+            name: 'Moshe',
+            print: function() {
+                console.log(`My name is ${this.name}`)
+            },
+        
+            printLater: function() {
+                setTimeout(this.print.bind(this), 2000)
+            }
+        };
+    console.log(hero.printLater());
+    </script>
+</body>
+</html>
