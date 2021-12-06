@@ -50,7 +50,7 @@
           
             let timerId = setInterval(function() {
                 container.innerHTML = `${format(minute)}:${format(second)}:${format(current/10)}`;
-                if ( (minute == to-1 && second == 3 && current == 990 ) || (isStop == true) ){
+                if ( (minute == to-1 && second == 59 && current == 990 ) || (isStop == true) ){
                     clearInterval(timerId);
                 }
                 current+= 10;
