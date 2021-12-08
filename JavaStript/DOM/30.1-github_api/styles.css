@@ -46,7 +46,7 @@ form {
 }
 .result-field {
     width: 100%;
-    background: rgb(240, 240, 239);
+    background: lightyellow;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
