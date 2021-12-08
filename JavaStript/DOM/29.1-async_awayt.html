@@ -24,11 +24,9 @@ const getRecipe = (recipeID) => {
           publisher: "Pinchas Hodadad",
         };
         resolve(`${ID}: ${recipe.title}`);
-      },
-      1500,
-      recipeID
-    );
-  });
+      }, 1500, recipeID);
+    }
+  );
 };
 
 
@@ -36,7 +34,6 @@ const getRecipe = (recipeID) => {
 const getIDs2 = async () => {
   try {
     const IDs = await getIDs();
-    console.log(IDs);
     const recipes = await getRecipe(IDs[4]);
     console.log(recipes);
   } catch (e) {
