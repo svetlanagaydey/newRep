@@ -7,10 +7,8 @@ fetch(url)
             const arr = createArray(data.results);
             console.log(arr);
 
-
-            console.log(data.results);
+          //  console.log(data.results);
         })
-        // .then((data.characters) => console.log(''))
         console.log('in');
 
 console.log('helo');
@@ -23,7 +21,13 @@ function createArray(array) {
         object.name = el.name;
         object.hair_color = el.hair_color;
         object.height = el.height;
-        object.planet = el.homeworld;
+        let planetUrl = el.homeworld;
+        const objPlanet = async function() {
+            return fetch(planetUrl)
+            .then((res) => res.json())
+            .then((response) => response.name); }
+                
+        
         result.push(object);
     }
     return result;
