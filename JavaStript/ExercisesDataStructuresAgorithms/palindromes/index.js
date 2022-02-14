@@ -14,8 +14,6 @@
 //     return str === reversed;
 // }
 
-
-
 // function palindrome(str) {
 //     for (let i=0; i<str.length/2; i++) {
 //         if (str[i]!==str[str.length-1-i]) {
@@ -25,6 +23,7 @@
 //     return true;
 // }
 
+//The every() method tests whether all elements in the array pass the test implemented by the provided function. It returns a Boolean value.
 function palindrome(str) {
     return str.split('').every((char, i) => {
         return char === str[str.length-i-1]
