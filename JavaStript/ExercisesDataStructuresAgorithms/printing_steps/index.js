@@ -39,12 +39,13 @@ function steps(n, row = 0, stair = '') {
         console.log(stair);
         return steps(n, row+1);
     }
-    if (stair.length <= row) {
-        stair += "#";
-    } else {
-         stair += "-";
-    }
-    steps(n, row, stair);
+    // if (stair.length <= row) {
+    //     stair += "#";
+    // } else {
+    //      stair += "-";
+    // }
+    const add = stair.length <= row ? "#" : "-";
+    steps(n, row, stair+add);
 }
 steps(5);
 module.exports = steps;
