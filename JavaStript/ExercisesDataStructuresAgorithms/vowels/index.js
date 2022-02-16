@@ -30,6 +30,7 @@
 
 function vowels(str) {
     let matches = str.match(/[aeiou]/g);  //g-get all matches, i-case insensative, match works with string and regex
+    console.log(matches)
     return matches ? matches.length : 0;
 }
 
