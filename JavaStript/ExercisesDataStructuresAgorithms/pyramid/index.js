@@ -48,6 +48,7 @@ function pyramid(n, row=0, level='') {
         console.log(level);
         return pyramid(n, row + 1)
     }
+    
     let add;
     if ((level.length >= midpoint - row) && (level.length <= midpoint + row)) {
         add = "#";

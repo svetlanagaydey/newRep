@@ -21,7 +21,7 @@
 //     let count = 0;
 //     let vowelsString = 'aeiou';
 //     for (let char of str) {
-//         if (vowelsString.includes(char)) {
+//         if (vowelsString.includes(char)) {   //includes works with string and with array
 //             count++
 //         }
 //     }
