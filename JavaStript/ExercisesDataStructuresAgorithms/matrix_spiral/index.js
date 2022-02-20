@@ -27,7 +27,7 @@ function matrix(n) {
     let endRow = n-1;
     let counter = 1;
     
-    while(counter <= n*n) {
+    while(startColumn <= endColumn && startRow <= endRow) {     // (counter<=n*n)
         for (let i = startColumn; i <= endColumn; i++) {
             result[startRow][i] = counter;
             counter++
@@ -52,4 +52,4 @@ function matrix(n) {
     return result;
 }
 
-console.log(matrix(3));
+console.log(matrix(4));
