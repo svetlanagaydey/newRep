@@ -16,18 +16,22 @@
 //     return arrayFibonacci[n]
 // }
 
-function fib(n, index=2, arrayFibonacci = [0, 1]) {
-    // const arrayFibonacci = [0, 1];
-    // let index = 2;
-    if (index <= n) {
-        let first = arrayFibonacci[index-1];
-        let second = arrayFibonacci[index-2];
-        arrayFibonacci.push(first + second);
-        index++;
-        fib(n, index++, arrayFibonacci)
+// function fib(n, index=2, arrayFibonacci = [0, 1]) {
+//     if (index <= n) {
+//         let first = arrayFibonacci[index-1];
+//         let second = arrayFibonacci[index-2];
+//         arrayFibonacci.push(first + second);
+//         index++;
+//         fib(n, index++, arrayFibonacci)
+//     }
+//     return arrayFibonacci[n]
+
+function fib(n) {
+    if (n < 2) {
+        return n
+    } else {
+        return fib(n-1)+fib(n-2);
     }
-    return arrayFibonacci[n]
 }
 
-
-console.log(fib(5));
+console.log(fib(2));
