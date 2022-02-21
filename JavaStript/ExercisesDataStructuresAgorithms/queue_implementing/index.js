@@ -16,14 +16,15 @@ class Queue {
         this.data.unshift(record);
         console.log(this.data);
     }
-    remove(record) {
-        this.data.pop(record);
+    remove() {
+        this.data.pop();
         console.log(this.data);
     }
 }
 
     const q = new Queue();
     q.add(1);
+    q.add(2);
     q.remove(); // returns 1;
 
 module.exports = Queue;
