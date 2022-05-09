@@ -162,6 +162,6 @@ list.head = nodeOne;
 list.insertFirst(15);
 list.insertFirst(25);
 list.insertFirst(35);
-console.log(list);
+//console.log(list);
 
 module.exports = { Node, LinkedList };

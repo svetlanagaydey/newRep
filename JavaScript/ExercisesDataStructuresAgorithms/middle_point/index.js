@@ -26,4 +26,5 @@ const l = new LinkedList();
   l.insertLast('a')
   l.insertLast('b')
   l.insertLast('c')
-  console.log(midpoint(l)); // returns { data: 'b' }
+  console.log(midpoint(l));
+  // returns { data: 'b' }
